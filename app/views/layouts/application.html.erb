@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsBudget</title>
+    <title>Rails Budget</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="antialiased text-neutral bg-neutral-900">
+    <%= render 'shared/alerts' %>
+    <div class="mx-auto h-screen bg-neutral-100" style="max-width: 390px">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </div>
   </body>
 </html>
