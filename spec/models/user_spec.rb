@@ -17,7 +17,7 @@ RSpec.describe User, type: :model do
 
   it 'Name attribute size should be less than 25 characters' do
     name = ''
-    30.times { |i| name += i.to_s } #* 30 characters
+    30.times { |i| name += i.to_s } # * 30 characters
     subject.name = name
 
     expect(subject).to_not be_valid

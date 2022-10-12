@@ -15,7 +15,7 @@ RSpec.describe Deal, type: :model do
 
   it 'Name attribute size should be less than 50 characters' do
     name = ''
-    60.times { |i| name += i.to_s } #* 60 characters
+    60.times { |i| name += i.to_s } # * 60 characters
     subject.name = name
     expect(subject).to_not be_valid
   end
