@@ -1,0 +1,9 @@
+<% content_for :content do %>
+  <header>
+    <%= render 'shared/auth-header' %>
+  </header>
+  <main class="">
+    <%= yield %>
+  </main>
+<% end %>
+<%= render template: "layouts/application" %>

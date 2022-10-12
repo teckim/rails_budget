@@ -12,7 +12,6 @@ module.exports = {
       colors: {
         main: "#3778c2",
         secondary: "#5fb523",
-        neutral: "#434b54",
       },
       fontFamily: {
         sans: ["'Proxima Nova'", ...defaultTheme.fontFamily.sans],
