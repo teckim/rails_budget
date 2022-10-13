@@ -1,8 +1,8 @@
 <% content_for :content do %>
   <header>
-    header
+    <%= render 'shared/header' %>
   </header>
-  <main class="container mx-auto my-28">
+  <main>
     <%= yield %>
   </main>
 <% end %>

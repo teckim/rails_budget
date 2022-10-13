@@ -11,7 +11,7 @@
   </head>
   <body class="antialiased text-neutral bg-neutral-900">
     <%= render 'shared/alerts' %>
-    <div class="mx-auto h-screen bg-neutral-100" style="max-width: 390px">
+    <div class="mx-auto min-h-screen bg-neutral-100" style="max-width: 390px">
       <%= content_for?(:content) ? yield(:content) : yield %>
     </div>
   </body>
