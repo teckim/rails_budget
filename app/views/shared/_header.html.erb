@@ -6,7 +6,7 @@
       </svg>
     <% end %>
   </div>
-  <div>
+  <div class="text-center">
     <%- if controller_name == 'groups' %>
       <div>CATEGORIES</div>
     <% end %>
@@ -17,9 +17,9 @@
   <div>
     <% if user_signed_in? %>
       <div class="flex items-center gap-x-4">
-        <div>
+        <div class="text-right">
           <div class="font-mono text-sm"><%= current_user.name %></div>
-          <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+          <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "inline-block" do %>
             <div class="px-2 bg-neutral-100/50 text-main rounded text-xs font-semibold">Logout</div>
           <% end %>
         </div>
