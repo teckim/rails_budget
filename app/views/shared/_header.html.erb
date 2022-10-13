@@ -1,0 +1,29 @@
+<div class="h-16 flex justify-between items-center px-4 bg-main text-neutral-100">
+  <div>
+    <%= link_to root_path do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+    <% end %>
+  </div>
+  <div>
+    <%- if controller_name == 'groups' %>
+      <div>CATEGORIES</div>
+    <% end %>
+    <%- if controller_name == 'deals' %>
+      <div>TRANSACTIONS</div>
+    <% end %>
+  </div>
+  <div>
+    <% if user_signed_in? %>
+      <div class="flex items-center gap-x-4">
+        <div>
+          <div class="font-mono text-sm"><%= current_user.name %></div>
+          <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+            <div class="px-2 bg-neutral-100/50 text-main rounded text-xs font-semibold">Logout</div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
