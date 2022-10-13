@@ -1,0 +1,10 @@
+<div>
+  <div class="p-4 flex justify-between text-lg">
+    <div class="text-neutral-600">Total amount</div>
+    <div class="font-semibold"><%= number_to_currency @total %></div>
+  </div>
+  <%= render @deals %>
+</div>
+<div class="mt-4">
+  <%= link_to "Create a transaction", new_group_deal_path(@group), class: "w-full block px-4 py-3 text-main bg-main/10 tracking-wide text-center" %>
+</div>

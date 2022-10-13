@@ -1,0 +1,29 @@
+<% input_classes = 'w-full h-12 border-none focus:ring-0' %>
+<%= form_with model: @deal, scope: :deal, url: deals_path do |form| %>
+  <div class="flex flex-col px-4 border-y border-neutral bg-white">
+    <div class="p-2">
+      <div class="text-neutral-600">Groups</div>
+      <div class="gap-x-2 snap-x mx-auto snap-mandatory flex items-center overflow-scroll py-2 pl-4">
+        <%= collection_check_boxes :deal, :group_ids, current_user.groups.all, :id, :name, include_hidden: false, required: true do |b| %>
+          <div class="snap-center flex-shrink-0">
+            <%= b.check_box(class: "hidden") %>
+            <%= b.label(class: "block h-full px-4 py-2 rounded border border-neutral-200 bg-neutral-100 label-checked:bg-main label-checked:text-neutral-100") %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="border-t border-neutral"></div>
+    <div>
+      <%= form.text_field :name, class: input_classes, placeholder: "Name", required: true %>
+    </div>
+    <div class="border-t border-neutral"></div>
+    <div>
+      <%= form.number_field :amount, class: input_classes, placeholder: "Amount", required: true %>
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="w-full px-4 py-3 text-main bg-main/10 tracking-wide">
+      Save
+    </button>
+  </div>
+<% end %>
