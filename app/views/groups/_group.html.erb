@@ -1,4 +1,4 @@
-<%= link_to group_deals_path(group) do %>
+<%= link_to group_deals_path(group), id: "group_link_#{group.id}" do %>
   <div class="flex px-4 py-3 bg-white gap-x-4">
     <div class="h-20 w-20 shrink-0 rounded overflow-hidden">
       <img src="<%= group.icon %>" />
