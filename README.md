@@ -8,6 +8,12 @@
 ![](https://img.shields.io/badge/Ruby_On_Rails-red)
 ![](https://img.shields.io/badge/PostgreSQL-red)
 
+### Links
+
+[Live demo](https://dry-lowlands-09005.herokuapp.com)
+[Video presentation](https://www.loom.com/share/7454254085c84b19b88a3b696a0fdfb9)
+
+
 ### Install & Setup
 
 To setup and install this sample ROR Blog project, follow the below steps:
