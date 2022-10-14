@@ -1,5 +1,5 @@
-<% alert_container_classes = 'flex items-center rounded-md px-4 py-2 mb-4 text-sm w-96 relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-1' %>
-<div class="absolute left-4 top-3 text-sm">
+<% alert_container_classes = 'flex items-center rounded-md px-4 py-2 mb-4 text-sm w-96 max-w-full relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-1' %>
+<div class="absolute left-4 top-3 right-4 text-sm">
   <% if notice %>
     <div class="<%= alert_container_classes %> bg-sky-100 text-sky-700 before:bg-sky-700" role="alert">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 shrink-0 mr-3">
