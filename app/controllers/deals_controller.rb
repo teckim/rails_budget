@@ -1,5 +1,5 @@
 class DealsController < MainController
-  before_action :fetch_group, only: %i[index show]
+  before_action :fetch_group, only: %i[index show new]
 
   def index
     @deals = @group ? @group.deals : Deal.all
@@ -8,6 +8,7 @@ class DealsController < MainController
 
   def new
     @deal = Deal.new
+    @deal.group_ids = [@group.id] if @group
   end
 
   def create
