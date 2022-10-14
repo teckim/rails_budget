@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'tailwindcss-rails', '~> 2.0'
 
@@ -71,6 +72,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end

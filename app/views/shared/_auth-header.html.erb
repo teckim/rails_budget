@@ -1,0 +1,17 @@
+<div class="h-16 grid grid-cols-3 items-center px-4 bg-main text-neutral-100">
+  <div>
+    <%= link_to root_path(resource_name) do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+    <% end %>
+  </div>
+  <div class="text-center">
+    <%- if controller_name == 'sessions' %>
+      <div>LOG IN</div>
+    <% end %>
+    <%- if controller_name == 'registrations' %>
+      <div>REGISTER</div>
+    <% end %>
+  </div>
+</div>

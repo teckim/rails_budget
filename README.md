@@ -8,6 +8,12 @@
 ![](https://img.shields.io/badge/Ruby_On_Rails-red)
 ![](https://img.shields.io/badge/PostgreSQL-red)
 
+### Links
+
+[Live demo](https://dry-lowlands-09005.herokuapp.com)
+[Video presentation](https://www.loom.com/share/7454254085c84b19b88a3b696a0fdfb9)
+
+
 ### Install & Setup
 
 To setup and install this sample ROR Blog project, follow the below steps:
@@ -28,10 +34,12 @@ $ cd rails_budget
       - **`rake db:create`**
       - **`rake db:migrate`**
       - **`rake db:seed`**
+      - **`rails assets:precompile`**
 - With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
 
 ### Tests
 
+- Run `rake db:migrate RAILS_ENV=test`
 - Run `rake db:seed RAILS_ENV=test` to seed the testing database
 - Run `rspec`
 
